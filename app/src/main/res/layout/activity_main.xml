@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E1FBFF">
+
+    <TextView
+        android:id="@+id/Title"
+
+        android:layout_marginTop="100dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Passwords\nGenerator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/kurale"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:paddingStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/CheckTitle"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+
+        android:text="Check:"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="20dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkboxNumbers"
+
+        app:layout_constraintTop_toBottomOf="@id/CheckTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="17dp"
+        android:text="Numbers"
+        />
+
+    <CheckBox
+        android:id="@+id/checkboxSymbols"
+
+        app:layout_constraintTop_toBottomOf="@id/checkboxNumbers"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="17dp"
+        android:text="Symbols"
+        />
+
+    <CheckBox
+        android:id="@+id/checkboxTopRegister"
+
+        app:layout_constraintTop_toBottomOf="@id/checkboxSymbols"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="17dp"
+        android:text="Top Register"
+        />
+
+    <Button
+        android:id="@+id/btnGenerate"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/checkboxTopRegister"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/Password"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/btnGenerate"
+        android:layout_marginTop="10dp"
+
+        android:textSize="20dp"
+        android:hint="Password..."
+        android:textColor="@color/black"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
